@@ -13,6 +13,6 @@
     },
     "scripts": {
         "stan": "phpstan analyse",
-        "run": "php index.php"
+        "start": "php index.php"
     }
 }
