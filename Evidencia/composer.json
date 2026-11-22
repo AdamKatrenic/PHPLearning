@@ -12,6 +12,7 @@
         "phpstan/phpstan": "^2.0"
     },
     "scripts": {
-        "stan": "phpstan analyse"
+        "stan": "phpstan analyse",
+        "run": "php index.php"
     }
 }
