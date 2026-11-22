@@ -32,4 +32,21 @@ final class ZoznamZariadeni
     {
         return count($this->zariadenia);
     }
+
+        /** @return list<Zariadenie> */
+    public function podlaStavu(Stav $stav): array
+    {
+        return array_values(
+            array_filter(
+                $this->zariadenia,
+                fn (Zariadenie $z): bool => $z->stav() === $stav
+            )
+        );
+    }
+
+    /** @return list<Zariadenie> */
+    public function poruchove(): array
+    {
+        return $this->podlaStavu(Stav::Porucha);
+    }
 }
