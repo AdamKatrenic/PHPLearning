@@ -23,9 +23,7 @@ final class ZoznamZariadeni
     /** @return list<Zariadenie> */
     public function offline(): array
     {
-        return array_values(
-            array_filter($this->zariadenia, fn (Zariadenie $z): bool => !$z->jeOnline())
-        );
+        return $this->podlaStavu(Stav::Offline);
     }
 
     public function pocet(): int

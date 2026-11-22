@@ -6,9 +6,7 @@ use App\Stav;
 use App\Zariadenie;
 use App\ZoznamZariadeni;
 
-require_once __DIR__ . '/src/Stav.php';
-require_once __DIR__ . '/src/Zariadenie.php';
-require_once __DIR__ . '/src/ZoznamZariadeni.php';
+require __DIR__ . '/vendor/autoload.php';
 
 $zoznam = new ZoznamZariadeni();
 
